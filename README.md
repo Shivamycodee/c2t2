@@ -1,19 +1,25 @@
-## Foundry
+## Tech Used.
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+- Language -> Solidity
+- Framework -> [Foundry](https://book.getfoundry.sh/)
+- Cross-Chain Protocol -> [Wormhole](https://wormhole.com/docs/tutorials/by-product/contract-integrations/cross-chain-token-contracts/)
 
-Foundry consists of:
+## How to proceed...
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Documentation
+## Clone the repo.
 
-https://book.getfoundry.sh/
+```shell
+$ git clone https://github.com/Shivamycodee/c2t2
+```
 
-## Usage
+### Add private key.
+
+- Create a .env file and add private key in it.
+
+```shell
+ PRIVATE_KEY= CREATOR_PRIVATE_KEY
+```
 
 ### Build
 
@@ -21,46 +27,18 @@ https://book.getfoundry.sh/
 $ forge build
 ```
 
-### Test
+### Deploy CrossChainSender & CrossChainReceiver Contracts to their respective Blockchain.
 
 ```shell
-$ forge test
+$  npx ts-node scripts/deploy.ts
 ```
 
-### Format
+- It will ask you to choose the sender and receiver blockchain. you can add more chain options in deploy-config/config.json using [wormhole-contract-addresses](https://wormhole.com/docs/build/reference/contract-addresses/) . 
+
+- I have deployed this contracts on BSC Testnet & Avalanche Fuji. You can view them in deploy-config/contracts.json.
+
+### Transfer Tokens
 
 ```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+$ npx ts-node scripts/transfer.ts
 ```
