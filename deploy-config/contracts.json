@@ -1,0 +1,12 @@
+{
+  "4": {
+    "networkName": "Binance Smart Chain Testnet",
+    "deployedAt": "2025-02-01T08:17:37.424Z",
+    "CrossChainSender": "0x772718462106DCa8429e81b27Fa43466e08B95Ea"
+  },
+  "6": {
+    "networkName": "Avalanche testnet fuji",
+    "deployedAt": "2025-02-01T08:17:37.473Z",
+    "CrossChainReceiver": "0x772718462106DCa8429e81b27Fa43466e08B95Ea"
+  }
+}
