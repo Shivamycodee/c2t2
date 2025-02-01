@@ -42,3 +42,7 @@ $  npx ts-node scripts/deploy.ts
 ```shell
 $ npx ts-node scripts/transfer.ts
 ```
+
+### Contributions
+
+- Contributions are welcome! Please feel free to submit a Pull Request.
